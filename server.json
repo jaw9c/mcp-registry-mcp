@@ -1,0 +1,21 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+  "name": "com.remote-mcp/registry-mcp",
+  "description": "An MCP server that serves informtaion from the official MCP registry",
+  "status": "active",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://registry-mcp.remote-mcp.com"
+    },
+    {
+      "type": "sse",
+      "url": "https://registry-mcp.remote-mcp.com/sse"
+    }
+  ],
+  "repository": {
+    "url": "https://github.com/jaw9c/mcp-registry-mcp",
+    "source": "github"
+  },
+  "version": "1.0.0"
+}
