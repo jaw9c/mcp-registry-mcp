@@ -1,21 +1,23 @@
-# Building a Remote MCP Server on Cloudflare (Without Auth)
+# MCP Registry Server
 
-This example allows you to deploy a remote MCP server that doesn't require authentication on Cloudflare Workers. 
+Avialble at: https://registry-mcp.remote-mcp.com
 
-## Get started: 
+An MCP server that provides tools to search and retrieve information from the official MCP registry.
 
-[![Deploy to Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/cloudflare/ai/tree/main/demos/remote-mcp-authless)
+## Tools
 
-This will deploy your MCP server to a URL like: `remote-mcp-server-authless.<your-account>.workers.dev/sse`
+- **ListMCPServers**: Search and list MCP servers from the registry with optional filtering
+- **GetMCPServer**: Get detailed information about a specific MCP server
 
-Alternatively, you can use the command line below to get the remote MCP Server created on your local machine:
+## Deployment
+
+Deploy to Cloudflare Workers:
+
 ```bash
-npm create cloudflare@latest -- my-mcp-server --template=cloudflare/ai/demos/remote-mcp-authless
+npm run deploy
 ```
 
-## Customizing your MCP Server
-
-To add your own [tools](https://developers.cloudflare.com/agents/model-context-protocol/tools/) to the MCP server, define each tool inside the `init()` method of `src/index.ts` using `this.server.tool(...)`. 
+This will deploy your MCP server to a URL like: `registry-mcp.remote-mcp.com`
 
 ## Connect to Cloudflare AI Playground
 
